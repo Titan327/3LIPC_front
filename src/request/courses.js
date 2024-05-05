@@ -1,5 +1,5 @@
 
-const baseUrl = "http://127.0.0.1:9000"
+const baseUrl = "http://192.168.83.102:9000"
 
 async function getAll () {
     try {
