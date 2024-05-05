@@ -4,6 +4,9 @@ import RecentGrades from "./view/RecentGrades";
 import Header from "./componant/Header";
 import Sidebar from "./componant/Sidebar";
 import AllCourses from "./view/AllCourses";
+import Upload from "./view/Upload";
+import Login from "./view/Login";
+import Register from "./view/Register";
 
 function App() {
     return (
@@ -19,6 +22,9 @@ function App() {
                         <Routes>
                             <Route path="/" element={<RecentGrades/>} />
                             <Route path="/courses" element={<AllCourses/>} />
+                            <Route path="/exercise/:exerciseId" element={<Upload/>} />
+                            <Route path="/login" element={<Login/>} />
+                            <Route path="/register" element={<Register/>} />
                         </Routes>
                     </BrowserRouter>
                 </div>

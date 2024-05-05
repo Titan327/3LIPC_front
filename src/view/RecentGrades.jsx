@@ -1,5 +1,21 @@
+import {useEffect, useState} from "react";
+import Courses from "../request/courses";
 
 function RecentGrades() {
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const responseData = await Courses.GetMyNotes();
+                console.log(responseData);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+
+    }, []);
+
     //TODO: faire la requete a l'api pour recup le tableau
     const tabData = [
         ["Subject","Teacher","Exercise","Grade"],
@@ -31,6 +47,7 @@ function RecentGrades() {
             <table className="table">
                 <thead>
                     <tr>
+
                         {tabHead}
                     </tr>
                 </thead>
