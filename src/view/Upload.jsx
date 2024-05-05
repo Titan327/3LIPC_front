@@ -32,7 +32,7 @@ function Upload(){
             formData.append('file', file);
 
 
-            const response = await fetch('http://127.0.0.1:9000/api/subject/exercise/'+exerciseId, {
+            const response = await fetch('http://192.168.83.102:9000/api/subject/exercise/'+exerciseId, {
                 method: 'POST',
                 body: formData,
             });
