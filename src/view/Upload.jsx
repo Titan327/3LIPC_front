@@ -35,7 +35,7 @@ function Upload(){
             const response = await fetch('http://192.168.83.102:9000/api/subject/exercise/'+exerciseId, {
                 method: 'POST',
                 headers: {
-                    'Authorization': `${localStorage.getItem('token')}`
+                    'Authorization':'Bearer '+`${localStorage.getItem('token')}`
                 },
                 body: formData,
             });
